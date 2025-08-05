@@ -385,14 +385,49 @@ body {
 }
 
 .timeline-item.future .timeline-content {
-    background: linear-gradient(135deg, var(--card-bg), var(--accent-color)10%);
-    border-color: var(--accent-color);
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-item.future .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #3b82f6, var(--accent-color));
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.timeline-item.future .timeline-content h3 {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.timeline-item.future .timeline-content .timeline-year {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.timeline-item.future .timeline-content p:last-child {
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .timeline-item.future .timeline-marker {
     background: var(--accent-color);
     color: white;
     animation: pulse 2s infinite;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--accent-color), var(--shadow);
 }
 
 @keyframes pulse {
