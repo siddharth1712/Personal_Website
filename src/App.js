@@ -114,7 +114,7 @@ function App() {
           <div className="about-content">
             <div className="about-text">
               <h1>Siddharth Khandelwal</h1>
-              <p className="subtitle">Associate AI Researcher</p>
+              <p className="subtitle">AI Researcher</p>
               <div className="contact-info">
                 <span>📍 Bangalore, India</span>
                 <span>📧 <a href="mailto:siddharth.khandelwal2001@gmail.com">siddharth.khandelwal2001@gmail.com</a></span>
@@ -123,7 +123,7 @@ function App() {
               </div>
               <div className="about-description">
                 <p>I'm Siddharth, an AI researcher working on conditional diffusion models for computer vision applications. I completed my B.Tech in <a href="https://www.ee.iitb.ac.in/web/index.php">Electrical Engineering</a> from <a href="https://www.iitb.ac.in/">IIT Bombay</a>, along with minors in AI & Data Science and Computer Science Engineering, which sparked my interest in machine learning and computer vision.</p>
-                <p>As an AI researcher I have worked on human motion generation using diffusion models and currently focus on building conditional diffusion models for tasks like virtual try-on and human shape modification. I'm especially interested in vision language models, generative ai and the applicability of these models for real-world deployment.</p>
+                <p>As an AI researcher I have worked on human motion generation using diffusion models and currently focus on building conditional diffusion models for tasks like virtual try-on and human shape modification. My broader research interests include vision-language models, generative AI, 3D computer vision and exploring their real-world deployment and applicability.</p>
               </div>
             </div>
             <div className="profile-image">
