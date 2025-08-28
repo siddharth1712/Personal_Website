@@ -8,7 +8,7 @@ const Hero = () => {
           <img src="/ProfilePic.jpeg" alt="Siddharth Khandelwal" className="profile-pic" />
           <div className="hero-text">
             <h1>Siddharth Khandelwal</h1>
-            <p className="subtitle">Associate AI Researcher</p>
+            <p className="subtitle">AI Researcher</p>
             <div className="contact-info">
               <span>📍 Bangalore, India</span>
               <span>📧 <a href="mailto:siddharth.khandelwal2001@gmail.com">siddharth.khandelwal2001@gmail.com</a></span>
