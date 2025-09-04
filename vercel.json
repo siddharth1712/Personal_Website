@@ -4,25 +4,11 @@
         "runtime": "@vercel/node"
       }
     },
+    "cleanUrls": true,
     "rewrites": [
       {
-        "source": "/(.*).(pdf|png|jpg|jpeg|gif|svg|ico|css|js|woff2|woff|ttf|eot)",
-        "destination": "/$1.$2"
-      },
-      {
-        "source": "/(.*)",
+        "source": "/((?!.*\\.(?:pdf|png|jpg|jpeg|gif|svg|ico|css|js|woff2|woff|ttf|eot)).*)",
         "destination": "/index.html"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/Siddharth_Resume.pdf",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/pdf"
-          }
-        ]
       }
     ]
   }
