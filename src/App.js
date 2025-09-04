@@ -120,6 +120,7 @@ function App() {
                 <span>📧 <a href="mailto:siddharth.khandelwal2001@gmail.com">siddharth.khandelwal2001@gmail.com</a></span>
                 <span>🔗 <a href="https://www.linkedin.com/in/siddharth-khandelwal-711370193/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
                 <span>💻 <a href="https://github.com/siddharth1712" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+                <span>📄 <a href="/Siddharth_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></span>
               </div>
               <div className="about-description">
                 <p>I'm Siddharth, an AI researcher working on conditional diffusion models for computer vision applications. I completed my B.Tech in <a href="https://www.ee.iitb.ac.in/web/index.php">Electrical Engineering</a> from <a href="https://www.iitb.ac.in/">IIT Bombay</a>, along with minors in AI & Data Science and Computer Science Engineering, which sparked my interest in machine learning and computer vision.</p>
