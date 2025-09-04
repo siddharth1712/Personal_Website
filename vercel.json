@@ -1,9 +1,4 @@
 {
-    "functions": {
-      "src/pages/api/*.js": {
-        "runtime": "@vercel/node"
-      }
-    },
     "cleanUrls": true,
     "rewrites": [
       {
