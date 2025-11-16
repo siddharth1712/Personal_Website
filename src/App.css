@@ -34,10 +34,8 @@ body {
 
 .App {
     min-height: 100vh;
-    background-color: transparent;
+    background-color: var(--bg-color);
     color: var(--text-color);
-    position: relative;
-    z-index: 1;
 }
 
 /* Theme Toggle */
