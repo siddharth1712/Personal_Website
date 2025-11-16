@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Projects from './components/Projects';
 import Journey from './components/Journey';
+import GradientBlinds from './components/GradientBlinds';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -51,6 +52,20 @@ function App() {
   if (currentPage === 'projects') {
     return (
       <div className="App">
+        <GradientBlinds
+          gradientColors={['#FF9FFC', '#5227FF']}
+          angle={0}
+          noise={0.3}
+          blindCount={12}
+          blindMinWidth={50}
+          spotlightRadius={0.5}
+          spotlightSoftness={1}
+          spotlightOpacity={1}
+          mouseDampening={0.15}
+          distortAmount={0}
+          shineDirection="left"
+          mixBlendMode="lighten"
+        />
         {/* Theme Toggle */}
         <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
           {theme === 'light' ? '🌙' : '☀️'}
@@ -73,6 +88,20 @@ function App() {
   if (currentPage === 'journey') {
     return (
       <div className="App">
+        <GradientBlinds
+          gradientColors={['#FF9FFC', '#5227FF']}
+          angle={0}
+          noise={0.3}
+          blindCount={12}
+          blindMinWidth={50}
+          spotlightRadius={0.5}
+          spotlightSoftness={1}
+          spotlightOpacity={1}
+          mouseDampening={0.15}
+          distortAmount={0}
+          shineDirection="left"
+          mixBlendMode="lighten"
+        />
         {/* Theme Toggle */}
         <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
           {theme === 'light' ? '🌙' : '☀️'}
@@ -94,6 +123,20 @@ function App() {
 
   return (
     <div className="App">
+      <GradientBlinds
+        gradientColors={['#FF9FFC', '#5227FF']}
+        angle={0}
+        noise={0.3}
+        blindCount={12}
+        blindMinWidth={50}
+        spotlightRadius={0.5}
+        spotlightSoftness={1}
+        spotlightOpacity={1}
+        mouseDampening={0.15}
+        distortAmount={0}
+        shineDirection="left"
+        mixBlendMode="lighten"
+      />
       {/* Theme Toggle */}
       <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
         {theme === 'light' ? '🌙' : '☀️'}
