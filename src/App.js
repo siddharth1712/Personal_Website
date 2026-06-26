@@ -41,7 +41,7 @@ function App() {
       year: "2020",
       authors: "Yuktee Gupta, Siddharth Khandelwal et al.",
       venue: "71st International Astronautical Congress (IAC) - Cyberspace Edition",
-      link: "https://drive.google.com/file/d/1qJJNl_PKnnj49-t7nwE8GIQxBLb05euu/view?usp=sharing"
+      link: "https://dl.iafastro.directory/event/IAC-2020/paper/59667/"
     }
   ];
 
