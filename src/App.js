@@ -26,7 +26,8 @@ function App() {
       link: "https://arxiv.org/abs/2508.13065",
       website: "https://research.fastcode.ai/odo",
       status: "🎤 Oral Accepted (Top 5% of submissions)",
-      image: "/odo.png"
+      image: "/odo.png",
+      video: "/Odo_demo_video.mov"
     },
     {
       title: "IoT-based Sensing System for Thrips Pest and Disease Management in Onion Crop",
@@ -140,9 +141,21 @@ function App() {
                     )}
                   </div>
                 </div>
-                {pub.image && (
+                {(pub.video || pub.image) && (
                   <div className="publication-image">
-                    <img src={pub.image} alt={pub.title} />
+                    {pub.video ? (
+                      <video
+                        src={pub.video}
+                        poster={pub.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        aria-label={pub.title}
+                      />
+                    ) : (
+                      <img src={pub.image} alt={pub.title} />
+                    )}
                   </div>
                 )}
               </div>
