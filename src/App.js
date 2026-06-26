@@ -33,7 +33,7 @@ function App() {
       year: "2024",
       authors: "Susmita Banerjee, Kisan Sarda, Siddharth Khandelwal, Rajbabu Velmurugan et al.",
       venue: "2nd International IEEE Applied Sensing Conference",
-      link: "https://drive.google.com/file/d/1nhNsc6lkVobTDWpA7anf8MoXk81OCzui/view?usp=drive_link",
+      link: "https://ieeexplore.ieee.org/document/10466190",
       award: "🏆 Best Paper Award"
     },
     {
