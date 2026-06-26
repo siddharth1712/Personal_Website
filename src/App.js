@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Projects from './components/Projects';
-import Journey from './components/Journey';
 
 function App() {
   const [theme, setTheme] = useState('light');
-  const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
-    // Check for saved theme preference or default to 'light'
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -26,9 +22,10 @@ function App() {
       title: "Odo: Depth-Guided Diffusion for Identity-Preserving Body Reshaping",
       year: "2026",
       authors: "Siddharth Khandelwal et al.",
-      venue: "Winter Conference on Applications of Computer Vision (WACV) - Under Review",
+      venue: "Winter Conference on Applications of Computer Vision (WACV)",
       link: "https://arxiv.org/abs/2508.13065",
-      status: "📝 Under Review",
+      website: "https://research.fastcode.ai/odo",
+      status: "🎤 Oral Accepted (Top 5% of submissions)",
       image: "/odo.png"
     },
     {
@@ -48,68 +45,13 @@ function App() {
     }
   ];
 
-  if (currentPage === 'projects') {
-    return (
-      <div className="App">
-        {/* Theme Toggle */}
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
-        
-        {/* Navigation */}
-        <nav className="navigation">
-          <div className="nav-container">
-            <button onClick={() => setCurrentPage('home')} className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}>Home</button>
-            <button onClick={() => setCurrentPage('projects')} className={`nav-link ${currentPage === 'projects' ? 'active' : ''}`}>Projects</button>
-            <button onClick={() => setCurrentPage('journey')} className={`nav-link ${currentPage === 'journey' ? 'active' : ''}`}>Journey</button>
-          </div>
-        </nav>
-        
-        <Projects />
-      </div>
-    );
-  }
-
-  if (currentPage === 'journey') {
-    return (
-      <div className="App">
-        {/* Theme Toggle */}
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
-        
-        {/* Navigation */}
-        <nav className="navigation">
-          <div className="nav-container">
-            <button onClick={() => setCurrentPage('home')} className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}>Home</button>
-            <button onClick={() => setCurrentPage('projects')} className={`nav-link ${currentPage === 'projects' ? 'active' : ''}`}>Projects</button>
-            <button onClick={() => setCurrentPage('journey')} className={`nav-link ${currentPage === 'journey' ? 'active' : ''}`}>Journey</button>
-          </div>
-        </nav>
-        
-        <Journey />
-      </div>
-    );
-  }
-
   return (
     <div className="App">
-      {/* Theme Toggle */}
       <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
         {theme === 'light' ? '🌙' : '☀️'}
       </button>
-      
-      {/* Navigation */}
-      <nav className="navigation">
-        <div className="nav-container">
-          <button onClick={() => setCurrentPage('home')} className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}>Home</button>
-          <button onClick={() => setCurrentPage('projects')} className={`nav-link ${currentPage === 'projects' ? 'active' : ''}`}>Projects</button>
-          <button onClick={() => setCurrentPage('journey')} className={`nav-link ${currentPage === 'journey' ? 'active' : ''}`}>Journey</button>
-        </div>
-      </nav>
-      
+
       <div className="container">
-        {/* About Section */}
         <section className="about-section">
           <div className="about-content">
             <div className="about-text">
@@ -123,8 +65,9 @@ function App() {
                 <span>📄 <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></span>
               </div>
               <div className="about-description">
-                <p>I'm Siddharth, an AI researcher working on conditional diffusion models for computer vision applications. I completed my B.Tech in <a href="https://www.ee.iitb.ac.in/web/index.php">Electrical Engineering</a> from <a href="https://www.iitb.ac.in/">IIT Bombay</a>, along with minors in AI & Data Science and Computer Science Engineering, which sparked my interest in machine learning and computer vision.</p>
-                <p>As an AI researcher I have worked on human motion generation using diffusion models and currently focus on building conditional diffusion models for tasks like virtual try-on and human shape modification. My broader research interests include vision-language models, generative AI, 3D computer vision and exploring their real-world deployment and applicability.</p>
+                <p>I'm Siddharth, an AI researcher working on conditional diffusion models for computer vision and speech-to-speech models. I completed my B.Tech in <a href="https://www.ee.iitb.ac.in/web/index.php">Electrical Engineering</a> from <a href="https://www.iitb.ac.in/">IIT Bombay</a>, along with minors in AI & Data Science and Computer Science Engineering, which sparked my interest in machine learning and computer vision.</p>
+                <p>After graduating, I worked at Texas Instruments as a Software Application Engineer for a year before transitioning to AI research. I joined <a href="https://www.fastcode.ai/" target="_blank" rel="noopener noreferrer">Fast Code AI</a> as an Associate Researcher under <a href="https://www.arjunjain.co.in/" target="_blank" rel="noopener noreferrer">Prof. Arjun Jain</a>, where I worked on text-to-motion synthesis, virtual try-on applications, and eventually Odo — my main publication accepted as an Oral at WACV 2026.</p>
+                <p>I was subsequently promoted to Research Scientist at Fast Code AI, and for the past 10 months I have been working on speech-to-speech models. My broader research interests include vision-language models, generative AI, 3D computer vision, and exploring their real-world deployment and applicability.</p>
               </div>
             </div>
             <div className="profile-image">
@@ -133,7 +76,48 @@ function App() {
           </div>
         </section>
 
-        {/* Publications Section */}
+        <section className="news-section">
+          <h2>News</h2>
+          <ul className="news-list">
+            <li>
+              <span className="news-date">Nov 2025</span>
+              <span className="news-content">
+                <strong>Odo</strong> accepted as an <strong>Oral</strong> presentation at <strong>WACV 2026</strong> (top 5% of submissions).
+              </span>
+            </li>
+            <li>
+              <span className="news-date">Aug 2025</span>
+              <span className="news-content">
+                Promoted to <strong>Research Scientist</strong> at <a href="https://www.fastcode.ai/" target="_blank" rel="noopener noreferrer">Fast Code AI</a>; began work on speech-to-speech models.
+              </span>
+            </li>
+            <li>
+              <span className="news-date">Oct 2024</span>
+              <span className="news-content">
+                Joined <a href="https://www.fastcode.ai/" target="_blank" rel="noopener noreferrer">Fast Code AI</a> as an Associate Researcher under <a href="https://www.arjunjain.co.in/" target="_blank" rel="noopener noreferrer">Prof. Arjun Jain</a>.
+              </span>
+            </li>
+            <li>
+              <span className="news-date">Jan 2024</span>
+              <span className="news-content">
+                Best Paper Award at the 2nd International IEEE Applied Sensing Conference for our IoT-based crop sensing system.
+              </span>
+            </li>
+            <li>
+              <span className="news-date">Aug 2023</span>
+              <span className="news-content">
+                Joined Texas Instruments as a Software Application Engineer.
+              </span>
+            </li>
+            <li>
+              <span className="news-date">2023</span>
+              <span className="news-content">
+                Graduated from <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">IIT Bombay</a> with a B.Tech in Electrical Engineering and minors in AI &amp; Data Science and Computer Science.
+              </span>
+            </li>
+          </ul>
+        </section>
+
         <section className="publications-section">
           <h2>Publications</h2>
           <div className="publications-list">
@@ -147,8 +131,13 @@ function App() {
                     {pub.award && <span className="award-badge">{pub.award}</span>}
                     {pub.status && <span className="status-badge">{pub.status}</span>}
                     <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                      {pub.link.includes('arxiv') ? 'View on arXiv' : 'View Paper'}
+                      {pub.link.includes('arxiv') ? 'arXiv' : 'Paper'}
                     </a>
+                    {pub.website && (
+                      <a href={pub.website} target="_blank" rel="noopener noreferrer">
+                        Project Page
+                      </a>
+                    )}
                   </div>
                 </div>
                 {pub.image && (
