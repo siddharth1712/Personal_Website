@@ -27,7 +27,7 @@ function App() {
       website: "https://research.fastcode.ai/odo",
       status: "🎤 Oral Accepted (Top 5% of submissions)",
       image: "/odo.png",
-      video: "/Odo_demo_video.mov"
+      video: "/Odo_demo_video.mp4"
     },
     {
       title: "IoT-based Sensing System for Thrips Pest and Disease Management in Onion Crop",
